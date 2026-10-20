@@ -55,4 +55,5 @@ for row in cur.execute("SELECT author FROM books WHERE author LIKE ?",
 print("title that have no rating")
 for row in cur.execute("SELECT title FROM books WHERE rating IS NULL"):
   print(row)
-
+conn.commit()
+conn.close()
